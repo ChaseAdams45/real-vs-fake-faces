@@ -6,11 +6,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="it">
-  <meta name="keywords" content="AI, Emotion Detector, AI Project, Deep Learning">
+  <meta name="keywords" content="AI, Deepfake Detector, AI Project, Deep Learning">
   
   <meta name="author" content="">
 
-  <title>Emotion Detector</title>
+  <title>Real vs Fake Face Detector</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/static/plugins/fontawesome/css/all.css">
 
@@ -38,7 +38,7 @@
                 <img src="{{ url_for('static', filename='images1/ai camp logo1.svg')}}" width="55" height="55" alt="">
               </a>
             <a class="navbar-brand" href="#">
-                <h3>Emotion Detector</h3>
+                <h3>Real vs Fake Face Detector</h3>
             </a>
             <!-- Toggler -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,39 +54,27 @@
                                 Links
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarWelcome">
-                                 <a class="dropdown-item " target="_blank" href="https://github.com/zikegcwk/aicamp_emotion">
+                                 <a class="dropdown-item " target="_blank" href="https://github.com/ChaseAdams45/real-vs-fake-faces">
                                     Github Repo
                                 </a>
-                                <a class="dropdown-item " target="_blank" href="https://medium.com/@beatrice.miha/i-learned-how-to-learn-dive-into-the-deepest-ocean-3add9449eb7e">
-                                    Beatrice's Post
-                                </a> 
-                                <a class="dropdown-item " target="_blank" href="https://medium.com/@thomaschen395/how-ai-camp-prepared-me-for-the-real-world-7f2a8c28cde5">
-                                    Thomas's Post
-                                </a>
-                        </li>
                         <li class="nav-item ">
                             <a href="#home" class="nav-link">
                                 Home
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a href="#demo" class="nav-link">
-                                Demo
+                            <a href="#about" class="nav-link">
+                                About the project
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a href="#meet_the_team" class="nav-link">
-                                The Team
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="#our_work" class="nav-link">
-                                Our Work
+                            <a href="#creator" class="nav-link">
+                                Creator
                             </a>
                         </li>
                     </ul>
                 <ul class="ml-lg-auto list-unstyled m-0 nav-btn">
-                    <li><a href="https://michaelzhang1.typeform.com/to/LWIfVW1H?typeform-source=www.ai-camp.org" target="_blank" class="btn btn-green btn-circled btn-two">Register for AI Camp</a></li>
+                    <li><a href="https://michaelzhang1.typeform.com/to/LWIfVW1H?typeform-source=www.ai-camp.org" target="_blank" class="btn btn-green btn-circled btn-two">AI Camp</a></li>
                 </ul>
             </div> <!-- / .navbar-collapse -->
         </div> <!-- / .Container -->
@@ -103,14 +91,8 @@
                    <div class="banner-content2 text-center style-2">
                         <!-- Heading -->
                         <h1 class="display-4 mb-4 ">
-                            AI Emotion Recognition
+                            AI Fake vs. Real Face Detector
                         </h1>
-
-                        <!-- Subheading -->
-                        <p class="lead mb-5 pr-0">
-                            Created with love from AI Camp @ Stanford StartX.<br>
-An AI project made by high school students.
-                        </p>
 
                         <!-- Button -->
                             <a class="mb-0" id='seefood_button'>
@@ -118,7 +100,7 @@ An AI project made by high school students.
                                     <input id="seefood_input_field" name="file" type="file" onchange="this.form.submit();" hidden/>
                                 </form>
                                 <button href="#" target="_blank" class="btn btn-white btn-circled btn-text">
-                                    <i class="fas fa-camera pr-2 left" aria-hidden="true"></i> Click to see emotion
+                                    <i class="fas fa-camera pr-2 left" aria-hidden="true"></i> Click to check face
                                 </button>
                             </a>
                         </div>
@@ -131,35 +113,38 @@ An AI project made by high school students.
     <section>
           <div class = "row no-gutters">
               <div class = "col">
-                  <img src="{{ url_for('static', filename='images1/happy-450x450-450x450.png')}}" class="img-fluid"/>
+                  <img src="{{ url_for('static', filename='images/real_00653.jpg')}}" class="img-fluid"/>
               </div>
               <div class = "col">
-                <img src="{{ url_for('static', filename='images1/neutral.png')}}" class="img-fluid"/>
+                <img src="{{ url_for('static', filename='images/real_00133.jpg')}}" class="img-fluid"/>
             </div>
             <div class = "col">
-                <img src="{{ url_for('static', filename='images1/sad.png')}}" class="img-fluid"/>
+                <img src="{{ url_for('static', filename='images/easy_56.jpg')}}" class="img-fluid"/>
             </div>
             <div class = "col">
-                <img src="{{ url_for('static', filename='images1/suprised.png')}}" class="img-fluid"/>
+                <img src="{{ url_for('static', filename='images/easy_216.jpg')}}" class="img-fluid"/>
             </div>
           </div>
     </section>
-    <a id="demo"></a>
-    <section class="section">
-        <div class="row align-items-center justify-content-center">
-            <div class="col text-center">
-                <div class="section-heading">
-                <h1 class="section-title mb-4 " >
-                    Watch Our Demo
-                </h1>
+    <a id="about"></a>
+    <section class="mbr-section mbr-section-nopadding" id="services-2" data-rv-view="5" style="padding-top: 60px; margin-top: 60px; padding-bottom: 60px">
+            <div class="row">
+                <div class="col-sm-12 col-lg-6 text-center">
+                    <h3 class="section-title display-4 results-title">About the Project</h3>
+
+                    <div class="lead">
+                        <p class="section-text results-text">For this project, I decided to try to create a model that can detect whether a face is real or fake. I thought this would be interesting to try and tackle because in one of my recent ethics courses, we discussed deepfakes and how they are harmful in spreading misinformation. I did not quite attain the results I wanted, given limited time to train and iterate to try to improve the model, but the final model I created was still able to do some learning shown by the confusion matrix. I had originally tried training on a smaller set size with lower quality pictures, but my final model was trained on 223 416x416 images.&nbsp;</p>
+                    </div>
+
                 </div>
-                <iframe src="https://www.youtube.com/embed/xZYPPYvJsv4?modestbranding=1&controls=1&showinfo=0&rel=0&enablejsapi=1&version=3&mute=0&loop=0&playerapiid=iframe_YTP_1564558236662&origin=*&wmode=transparent&iv_load_policy=3&html5=1&widgetid=1&playlist=xZYPPYvJsv4" class="youtube-video-iframe"></iframe>
-                <p class="small-text top-margin"> This is an initial prototype of our detection model where we only tested two emotions: happy and neutral. Since then, our model can predict happy, neutral, surprised, and angry very well!  </p>
+                <div class="col-sm-12 col-lg-6">
+                    <img class="mbr-figure-graph" src="{{ url_for('static', filename='images/confusion_matrix.png')}}">
+                     <img class="mbr-figure-graph" src="{{ url_for('static', filename='images/results.png')}}">
+                </div>
             </div>
-        </div>
     </section>
 
-<a id="meet_the_team"></a>
+<a id="creator"></a>
 <section class="section section-padding" id="services-2">
         <div class="container">
             <div class="row justify-content-center">
@@ -167,7 +152,7 @@ An AI project made by high school students.
                     <div class="section-heading">
                         <!-- Heading -->
                         <h2 class="section-title section-title-padding mb-2 text-white">
-                            Meet the Team
+                           About the Creator
                         </h2>
                     </div>
                 </div>
@@ -176,157 +161,12 @@ An AI project made by high school students.
             <div class="row justify-content-center text-center">
                 <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
                     <div class="web-service-block">
-                        <img class="image-container img-fluid" src="{{ url_for('static', filename='images1/beatrice.jpeg')}}">
-                        <h3>Beatrice Mihalache</h3>
-                        <p>Student at Los Gatos High School</p>
-                        <p>Beatrice enjoys the quick-paced learning style of AI Camp. She contributed to our data extraction and website frontend.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
-                    <div class="web-service-block">
-                        <img class="image-container img-fluid" src="{{ url_for('static', filename='images1/ary.jpeg')}}">
-                        <h3>Aryansh Chikkere</h3>
-                        <p>Student at American High School</p>
-                        <p>Ari enjoys studying Physics and improving code. He built the initial backend of this website.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
-                    <div class="web-service-block">
-                        <img class="image-container img-fluid" src="{{ url_for('static', filename='images1/thomas.jpeg')}}">
-                        <h3>Thomas Chen</h3>
-                        <p>Student at Irvington High School</p>
-                        <p>Thomas enjoys experimenting with code. He created a script to retrieve data from Bing and wrote the website HTML.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-sm-6 col-md-6 ">
-                    <div class="web-service-block">
-                        <img class="image-container img-fluid" src="{{ url_for('static', filename='images1/clement.jpeg')}}">
-                        <h3>Clement Ou</h3>
-                        <p>Student at Gunn High School</p>
-                        <p>Clement enjoys writing scripts and coding. He trained a neural network by using a deep learning instance in AWS.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6 ">
-                    <div class="web-service-block">
-                        <img class="image-container img-fluid" src="{{ url_for('static', filename='images1/muti.jpeg')}}">
-                        <h3>Muti Shuman</h3>
-                        <p>Student at Junipero Serra High School</p>
-                        <p>Muti enjoys playing basketball. He built scripts to capture data using OpenCV and prepared data for training.</p>
-                    </div>
-                </div>
-            </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-8 col-lg-6 text-center">
-                        <div class="section-heading">
-                            <!-- Heading -->
-                            <h2 class="section-title section-text">
-                                Our Intructors
-                            </h2>
-                        </div>
-                    </div>
-                </div> <!-- / .row -->
-    
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-sm-6 col-md-6">
-                        <div class="web-service-block">
-                            <img class="image-container img-fluid" src="{{ url_for('static', filename='images1/michael.jpeg')}}">
-                            <h3>Michael Ke Zhang</h3>
-                            <p>Stanford Ph.D</p>
-                            <p>Michael ran data teams at Blend Labs and Grab. He enjoys fishing and inspiring the next generation of students.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 col-md-6">
-                        <div class="web-service-block">
-                            <img class="image-container img-fluid" src="{{ url_for('static', filename='images1/ying.jpeg')}}">
-                            <h3>Ying Jiang</h3>
-                            <p>Stanford Ph.D</p>
-                            <p>Ying is a Lead Data Scientist at Ericsson. She is passionate in education, data analysis, and continuous learning.</p>
-                        </div>
+                        <h3>Chase Adams</h3>
+                      <p>I'm Chase and I'm in my last year as an EECS major at UC Berkeley! I have gained interest in machine learning through my past internships in courses. I ish I had more time to go above and beyond with this project, but it was a great learning experience, and I hope to learn more and do more with my next project!</p>
                     </div>
                 </div>
     </section>
 
-<a id="our_work"></a>
- <section class="section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6 text-center">
-                        <!-- Heading -->
-                        <h2 class="section-title">
-                            Our Work
-                        </h2>
-                        <!-- Subheading -->
-                </div>
-            </div> <!-- / .row -->
-            <div class="row justify-content-center text-center">
-                <p class="small-text">
-                    Learn about two students's experience at AI Camp, <br>from the beginning to the end!
-                </p>
-            </div>
-            <div class="row justify-content-center align-items-end">
-                <div class="col-lg-4 col-md-6">
-                    <div class="blog-box">
-                        <div class="blog-img-box">
-                            <img src="{{ url_for('static', filename='images1/brain.jpeg')}}" alt="" class="img-fluid blog-img">
-                        </div>
-                        <div class="single-blog">
-                            <div class="blog-content">
-                                <h6>28 July 2019</h6>
-                                <a target="_blank" href="https://medium.com/@beatrice.miha/i-learned-how-to-learn-dive-into-the-deepest-ocean-3add9449eb7e">
-                                    <h3 class="card-title">I learned how to learn: Dive into the deepest ocean</h3>
-                                </a>
-                                <p>Learn about Beatrice's experience at AI Camp, from the beginning to the end!</p>
-                                <a target="_blank" href="https://medium.com/@beatrice.miha/i-learned-how-to-learn-dive-into-the-deepest-ocean-3add9449eb7e" class="read-more">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="blog-box">
-                        <div class="blog-img-box">
-                            <img src="{{ url_for('static', filename='images1/happy.png')}}" alt="" class="img-fluid blog-img">
-                        </div>
-                        <div class="single-blog">
-                            <div class="blog-content">
-                                <h6> 5 August 2019</h6>
-                                <a target="_blank" href="https://medium.com/@thomaschen395/how-ai-camp-prepared-me-for-the-real-world-7f2a8c28cde5">
-                                    <h3 class="card-title">How AI Camp Prepared Me for the Real World</h3>
-                                </a>
-
-                                <p> Thomas' experience at AI Camp, from the beginning to the end!</p>
-                                 <a target="_blank" href="https://medium.com/@thomaschen395/how-ai-camp-prepared-me-for-the-real-world-7f2a8c28cde5" class="read-more">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="projects" class="section-bottom">
-        <div class="container">
-            <div class="row py-4">
-                <div class="col-lg-7 col-md-12 col-sm-12 ">
-                    <div class="single-project">
-                        <img src="{{ url_for('static', filename='images1/bg/banner_bg.jpg')}}" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-sm-12 ">
-                    <div class="project-content-block">
-                        <h4>Github</h4>
-                        <h2>Want to see the building process of our project?</h2>
-                        <p>Explore the inner workings of our project, from capturing data scripts to YOLO training!</p>
-                        <p class="mb-0">
-                            <a href="https://github.com/zikegcwk/aicamp_emotion" target="_blank" class="btn btn-white-black btn-circled">
-                                AI Camp Repository
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
  <footer class="section " id="footer">
         <div class="overlay footer-overlay"></div>
         <!--Content -->

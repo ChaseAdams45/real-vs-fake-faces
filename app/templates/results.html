@@ -21,7 +21,7 @@
                 <img src="{{ url_for('static', filename='images1/ai camp logo1.svg')}}" width="55" height="55" alt="">
               </a>
             <a class="navbar-brand " href="/#">
-                <h3 class="colored-text">Emotion Detector</h3>
+                <h3 class="colored-text">Real vs. Fake Face Detector</h3>
             </a>
             <!-- Toggler -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,39 +37,27 @@
                                 Links
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarWelcome">
-                                 <a class="dropdown-item " target="_blank" href="https://github.com/zikegcwk/aicamp_emotion">
+                                 <a class="dropdown-item " target="_blank" href="https://github.com/ChaseAdams45/real-vs-fake-faces">
                                     Github Repo
                                 </a>
-                                <a class="dropdown-item " target="_blank" href="https://medium.com/@beatrice.miha/i-learned-how-to-learn-dive-into-the-deepest-ocean-3add9449eb7e">
-                                    Beatrice's Post
-                                </a> 
-                                <a class="dropdown-item " target="_blank" href="https://medium.com/@thomaschen395/how-ai-camp-prepared-me-for-the-real-world-7f2a8c28cde5">
-                                    Thomas's Post
-                                </a>
-                        </li>
                         <li class="nav-item ">
-                            <a href="/#home" class="nav-link colored-text">
+                            <a href="#home" class="nav-link">
                                 Home
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a href="/#demo" class="nav-link colored-text">
-                                Demo
+                            <a href="#about" class="nav-link">
+                                About the project
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a href="/#meet_the_team" class="nav-link colored-text">
-                                The Team
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="/#our_work" class="nav-link colored-text">
-                                Our Work
+                            <a href="#creator" class="nav-link">
+                                Creator
                             </a>
                         </li>
                     </ul>
                 <ul class="ml-lg-auto list-unstyled m-0 nav-btn">
-                    <li><a href="https://michaelzhang1.typeform.com/to/LWIfVW1H?typeform-source=www.ai-camp.org" target="_blank" class="btn btn-green btn-circled btn-two">Register for AI Camp</a></li>
+                    <li><a href="https://michaelzhang1.typeform.com/to/LWIfVW1H?typeform-source=www.ai-camp.org" target="_blank" class="btn btn-green btn-circled btn-two">AI Camp</a></li>
                 </ul>
             </div> <!-- / .navbar-collapse -->
         </div> <!-- / .Container -->
@@ -107,15 +95,16 @@
     <section class="mbr-section mbr-section-nopadding" id="services-2" data-rv-view="5" style="padding-top: 60px; margin-top: 60px; padding-bottom: 60px">
             <div class="row">
                 <div class="col-sm-12 col-lg-6 text-center">
-                    <h3 class="section-title display-4 results-title">Why do we miss sometimes?</h3>
+                    <h3 class="section-title display-4 results-title">But the Model is Not Perfect. . . </h3>
 
                     <div class="lead">
-                        <p class="section-text results-text">Given just three weeks, we only had time to train our model with 5 emotions on about 6.7k labeled data. If we have more time, we can improve our model performance!&nbsp;</p>
+                        <p class="section-text results-text"> Shown are examples where the classification is all together wrong, correct, or fighting between real and fake. This reflects the high recall - all faces are at least recognized whether or not given the wrong label - but not so high precision. This model could have been improved given a larger and more broad dataset. Another improvement could be making this an image classification model rather than object detection, a it seems detection makes the model have a split opinion over most labels once it recognizes a face. &nbsp;</p>
                     </div>
 
                 </div>
                 <div class="col-sm-12 col-lg-6">
-                    <img class="mbr-figure-graph" src="{{ url_for('static', filename='images/clem-5-emo-ncm-671x690.jpg')}}">
+                    <img class="mbr-figure-graph" src="{{ url_for('static', filename='images/val_batch2_labels.jpg')}}">
+                  <img class="mbr-figure-graph" src="{{ url_for('static', filename='images/val_batch2_pred.jpg')}}">
                 </div>
             </div>
     </section>

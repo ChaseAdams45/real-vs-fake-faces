@@ -1,3 +1,21 @@
+# Project Description
+This project is a real vs fake face detector. It uses an object detection approach and was trained on data pulled from [this kaggle link](https://www.kaggle.com/datasets/uditsharma72/real-vs-fake-faces). I wrote a simple code to pull 300 random images - as 2000 would have taken too long to label given the training time. I had originally tried training on a smaller set size with lower quality pictures, but the final model was trained on 223 images of 416x416 pixel, as the rest were used for validation and test data. Training data and a confusion matrix of the validation class are shown below for reference.
+
+![Confusion Matrix](/app/static/images/confusion_matrix.png)
+
+![results](/app/static/images/results.png)
+
+I thought this would be interesting to try and tackle because in one of my recent ethics courses, we discussed deepfakes and how they are harmful in spreading misinformation. I did not quite attain the results I wanted, given limited time to train and iterate to try to improve the model, but the final model I created was still able to do some learning shown by the confusion matrix.
+
+![bad labels](/app/static/images/val_batch2_labels.jpg)
+
+![bad predictions](/app/static/images/val_batch2_pred.jpg)
+
+Shown are examples where the classification is all together wrong, correct, or fighting between real and fake. This reflects the high recall - all faces are at least recognized whether or not given the wrong label - but not so high precision. This model could have been improved given a larger and more broad dataset. Another improvement could be making this an image classification model rather than object detection, a it seems detection makes the model have a split opinion over most labels once it recognizes a face.
+
+Below is the original instructions.
+
+
 # Computer Vision Web Scaffold
 A scaffold for deploying dockerized flask applications.
 
